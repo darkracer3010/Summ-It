@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Fonts Here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'css/index.css' %}"
+    /> -->
+  </head>
+  <body class="">
+    <link rel="stylesheet" href={% static 'css/forms.css' %} />
+
+    <h2 class="title">Register Here..</h2>
+    <div class="mainbox">
+      <form class="mainform" method="POST" action="/">
+        {% csrf_token %}
+        <div class="fields">
+          <p>Email:</p>
+          <input
+            class="inputf"
+            type="email"
+            name="email"
+            id="email"
+            placeholder="testing@gmail.com"
+          />
+        </div>
+        <div class="fields">
+          <p>Username:</p>
+          <input
+            class="inputf"
+            type="text"
+            name="username"
+            id="username"
+            placeholder="exampleuser123"
+          />
+        </div>
+		<div class="fields">
+			<p>Phone No:</p>
+			<input
+			  class="inputf"
+			  type="text"
+			  name="phone"
+			  id="phoneno"
+			  placeholder="0123456789"
+			/>
+		  </div>
+        <div class="fields">
+          <p>Password:</p>
+          <input placeholder="*********"  class="inputf" type="password" name="password" id="password" />
+        </div>
+        <div class="fields">
+          <p>Confirm Password:</p>
+          <input placeholder="*********"  class="inputf" type="password" name="password2" id="password" />
+        </div>
+		<button type="submit" class=" btn btn-primary">Register</button>
+      </form>
+    </div>
+  </body>
+</html>

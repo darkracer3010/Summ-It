@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+.mainform {
+  width: 40%;
+  height: 50%;
+
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.fields {
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.inputf {
+  margin-left: 10px;
+  width: 70%;
+}
+.mainbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 65vh;
+  background-color: azure;
+
+}
+body {
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 5%;
+}
+.btn{
+    margin-top: 5%;
+}
+.title {
+  text-transform: capitalize;
+  font: 2em sans-serif;
+  
+  text-decoration: underline;
+}

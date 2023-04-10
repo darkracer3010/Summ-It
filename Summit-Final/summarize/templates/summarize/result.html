@@ -1,0 +1,38 @@
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/output.css' %}">
+<div class="mainbox" style="margin-top: 50px; margin-bottom: 100px;">
+   
+    <div class="youtubepic" style=" display : {{ display }}">
+        
+
+            <img class="ytimg" src={{ url }}>
+
+    </div>
+    <br>
+    <h2>{{ delay }}</h2>
+    <h3>The Summarized Video Output is:</h3>
+
+    <div class="output">
+        {{ output }}
+
+    </div>
+    <br>
+    <div class="output">
+      <h2
+         class="{% if recommend == 'This video is good based on the comments.' %}text-success{% elif recommend == 'This video is not good based on the comments.' %}text-danger{% else %}text-secondary{% endif %}">
+         {{ recommend }}
+      </h2>
+      <br>
+   </div>
+        <form action="">
+            <button class="btn btn-primary" formaction="/text">Text Summarize</button>
+            <button class="btn btn-primary" formaction="/video">Video Summarize</button>
+
+        </form>
+    </div>
+</div>
+
+
+{% endblock %}
